@@ -16,6 +16,7 @@
     "build": "npx nullstack build"
   },
   "dependencies": {
-    "mongodb": "^5.1.0"
+    "mongodb": "^5.1.0",
+    "postcss-loader": "^7.0.2"
   }
 }
