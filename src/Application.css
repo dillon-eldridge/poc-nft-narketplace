@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  color: #023020;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  color: #023020;
+  margin-left: .3em;
+}
+
+a:hover {
+  color: black;
+}
+
+button {
+  width: fit-content;
+  padding: .5rem .75rem;
+  border-radius: 10em;
+  background-color: #023020;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
