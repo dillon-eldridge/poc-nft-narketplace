@@ -1,6 +1,6 @@
 import Nullstack from 'nullstack'
 
-import './Marketplace.css'
+import './Marketplace.scss'
 
 class Marketplace extends Nullstack {
   nfts = []
