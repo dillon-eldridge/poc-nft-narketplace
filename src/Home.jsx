@@ -12,8 +12,8 @@ class Home extends Nullstack {
 
   render() {
     return (
-      <section>
-        <h1>BrokenSea Marketplace</h1>
+      <section class="py-16">
+        <h1 class="text-7xl mb-16">NFT Marketplace</h1>
         <Marketplace />
       </section>
     )
