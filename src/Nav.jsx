@@ -16,13 +16,17 @@ class Nav extends Nullstack {
 
   render() {
     return (
-      <nav>
+      <nav class="bg-green-900">
         <div>
-          <a href="#">Marketplace</a>
+          <a class="" href="/marketplace">
+            Marketplace
+          </a>
           <a href="#">List NFTs</a>
           <a href="#">About</a>
-          <button onclick={this.connect}>Connect Wallet</button>
-          <span class="wallet__address">{this.walletAddress}</span>
+          <button class="bg-white text-green-900 rounded-full py-2 px-4" onclick={this.connect}>
+            Connect Wallet
+          </button>
+          <span class="text-white">{this.walletAddress}</span>
         </div>
       </nav>
     )
