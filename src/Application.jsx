@@ -1,9 +1,9 @@
 import Nullstack from 'nullstack'
 
-import './Application.css'
+import './Application.scss'
 import Home from './Home'
 import Nav from './Nav'
-// import '../css/styles.css'
+import '../tailwind.css'
 
 class Application extends Nullstack {
   prepare({ page }) {
