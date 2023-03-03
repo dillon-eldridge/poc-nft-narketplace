@@ -2,6 +2,7 @@ import Nullstack from 'nullstack'
 
 import './Application.scss'
 import Home from './Home'
+import Marketplace from './Marketplace'
 import Nav from './Nav'
 import '../tailwind.css'
 
@@ -26,6 +27,7 @@ class Application extends Nullstack {
         <Head />
         <Nav />
         <Home route="/" greeting="NFT Skunkworks" />
+        <Marketplace route="/marketplace" />
       </body>
     )
   }
