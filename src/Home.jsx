@@ -1,7 +1,5 @@
 import Nullstack from 'nullstack'
 
-import Marketplace from './Marketplace'
-
 import './Home.css'
 
 class Home extends Nullstack {
@@ -13,8 +11,7 @@ class Home extends Nullstack {
   render() {
     return (
       <section class="py-16">
-        <h1 class="text-7xl mb-16">NFT Marketplace</h1>
-        <Marketplace />
+        <h1 class="text-7xl">Welcome</h1>
       </section>
     )
   }
