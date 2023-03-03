@@ -2,6 +2,8 @@ import Nullstack from 'nullstack'
 
 import './Marketplace.scss'
 
+import Listing from './Listing'
+
 class Marketplace extends Nullstack {
   prepare({ page }) {
     page.title = 'Marketplace'
@@ -11,33 +13,22 @@ class Marketplace extends Nullstack {
   nfts = []
 
   static async getNFTs({ database }) {
-    return await database.collection('nfts').find().toArray()
+    return database.collection('nfts').find().toArray()
   }
 
-  async initiate({ params }) {
+  async initiate() {
     this.nfts = await this.getNFTs()
   }
 
   render() {
     return (
-      <div class="grid grid-cols-3 gap-x-6">
-        {this.nfts.map((nft) => (
-          <div class="nft__tile">
-            {/* <div
-              style={{
-                backgroundImage: `url(${nft.properties.image.description})`,
-              }}
-            ></div> */}
-            <img src={nft.properties.image.description} />
-            <div class="flex align-start flex-col space-y-4 p-6">
-              <p class="text-xl font-black">{nft.title}</p>
-              <button class="bg-green-900 text-white rounded-full py-2 px-4 w-full">
-                Buy @ <span>{nft.price} ETH</span>
-              </button>
-            </div>
-          </div>
-        ))}
-      </div>
+      <section class="py-16">
+        <div class="grid grid-cols-3 gap-x-8">
+          {this.nfts.map((nft) => (
+            <Listing title={nft.title} image={nft.properties.image.description} price={nft.price} />
+          ))}
+        </div>
+      </section>
     )
   }
 }
