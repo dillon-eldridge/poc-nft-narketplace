@@ -1,6 +1,6 @@
 import Nullstack from 'nullstack'
 
-import './Nav.css'
+import './Nav.scss'
 
 class Nav extends Nullstack {
   async connect() {
@@ -16,17 +16,17 @@ class Nav extends Nullstack {
 
   render() {
     return (
-      <nav class="bg-green-900">
+      <nav class="flex items-center justify-around bg-green-900">
+        <a href="/">
+          <img href="/" src="/logo.svg" class="logo" />
+        </a>
         <div>
-          <a class="" href="/marketplace">
-            Marketplace
-          </a>
-          <a href="#">List NFTs</a>
-          <a href="#">About</a>
+          <a href="/marketplace">Marketplace</a>
+          <a href="/">Create</a>
           <button class="bg-white text-green-900 rounded-full py-2 px-4" onclick={this.connect}>
             Connect Wallet
           </button>
-          <span class="text-white">{this.walletAddress}</span>
+          {this.walletAddress && <span class="text-white ml-4">{this.walletAddress}</span>}
         </div>
       </nav>
     )
